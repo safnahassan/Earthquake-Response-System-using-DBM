@@ -1,0 +1,74 @@
+delete from Group_details;
+delete from Preinstalled_Short_Message;
+delete from Location;
+delete from User_details;
+delete from Message;
+delete from Position;
+
+insert into Group_details values ('S001','9999888777','Seismological Bureau');
+insert into Group_details values ('E001','9990000777','Executive Branch');
+insert into Group_details values ('N001','9999111777','News and Media Unit');
+insert into Group_details values ('F001','9999222777','Fire Control Unit');
+insert into Group_details values ('M001','9999333777','Medical Assistance Unit');
+insert into Group_details values ('P001','9999444555','Police');
+insert into Group_details values ('I001','9999444777','Individual User');
+
+insert into User_details values ('0001', 'abcd', 'John', 'S001');
+insert into User_details values ('0002', 'pass', 'Ben', 'E001');
+insert into User_details values ('0003', 'defg', 'Fred', 'N001');
+insert into User_details values ('0002', 'mnop', 'Ben', 'N001');
+insert into User_details values ('0004', 'pqrs', 'Ted', 'F001');
+insert into User_details values ('0005', 'wxyz', 'Sam', 'M001');
+insert into User_details values ('0006', 'ijkl', 'Ann', 'P001');
+insert into User_details values ('0007', 'efgh', 'Joe', 'I001');
+insert into User_details values ('0005', 'bcde', 'Sam', 'F001');
+insert into User_details values ('0008', 'cdef', 'Tom', 'P001');
+insert into User_details values ('0001', 'pwds', 'John', 'M001');
+insert into User_details values ('0006', 'fghi', 'Ann', 'I001');
+insert into User_details values ('0003', 'lmop', 'Fred', 'S001');
+insert into User_details values ('0007', 'tuvw', 'Joe', 'E001');
+
+insert into Location values ('414005', 'Ahmednagar');
+insert into Location values ('413201', 'Jamkhed');
+insert into Location values ('414402', 'Karjat');
+insert into Location values ('423604', 'Kopergaon');
+insert into Location values ('414609', 'Nevasa');
+insert into Location values ('444601', 'Amaravati');
+insert into Location values ('431113', 'Bharadi');
+insert into Location values ('431001', 'Aurangabad');
+insert into Location values ('431207', 'Karla');
+insert into Location values ('431215', 'Dabhadi');
+insert into Location values ('431101', 'Khirdi');
+insert into Location values ('431116', 'Khandala');
+
+insert into Preinstalled_Short_Message values ('M1','Earthquake Recorded by seismographs of intensity 1.');
+insert into Preinstalled_Short_Message values ('M12','Earthquake Recorded by seismographs of intensity 1-2. Felt slightly by some people.');
+insert into Preinstalled_Short_Message values ('M34','Earthquake Recorded by seismographs of intensity 3-4. Shaking of indoor objects is noticeable.');
+insert into Preinstalled_Short_Message values ('M46','Earthquake Recorded by seismographs of intensity 4-6. Moderate to significant damage very unlikely.');
+insert into Preinstalled_Short_Message values ('M67','Earthquake Recorded by seismographs of intensity 6-7. Damage of varying severity to poorly constructed buildings.');
+insert into Preinstalled_Short_Message values ('M81','Earthquake Recorded by seismographs of intensity 8-10. Felt in wider areas; up to hundreds of miles/kilometers from the epicenter.');
+insert into Preinstalled_Short_Message values ('M10','Earthquake Recorded by seismographs of intensity 8-10. At or near total destruction. Felt in extremely large regions.');
+
+insert into Message values('M1','0001','9999444777','Earthquake Recorded by seismographs of intensity 1.','Karjat','OK');
+insert into Message values('M12','0002','9999222777','Earthquake Recorded by seismographs of intensity 1-2. Felt slightly by some people.','Nevasa','OK');
+insert into Message values('M46','0003','9999444555','Earthquake Recorded by seismographs of intensity 4-6. Moderate to significant damage very unlikely.','Nevasa','OK');
+insert into Message values('M10','0006','9567844422','Earthquake Recorded by seismographs of intensity 8-10. At or near total destruction. Felt in extremely large regions.','Karla','OK');
+insert into Message values('M81','0005', '7030266880','Earthquake Recorded by seismographs of intensity 8-10. Felt in wider areas; up to hundreds of miles/kilometers from the epicenter.','Khirdi','OK');
+insert into  Message values('M34','0004','9122465741','Earthquake Recorded by seismographs of intensity 3-4. Shaking of indoor objects is noticeable.','Dabhadi','OK');
+insert into Message values('M67','0007','9597825641','Earthquake Recorded by seismographs of intensity 6-7. Damage of varying severity to poorly constructed buildings.','Aurangabad','OK');
+insert into Message values('M1','0008','9567486352','Earthquake Recorded by seismographs of intensity 1.', 'Jamkhed','OK');
+
+insert into Position values('S001', '0001', 'Yes');
+insert into Position values('E001','0002', 'Yes');
+insert into Position values('N001', '0003', 'Yes');
+insert into Position values('N001', '0002', 'No');
+insert into Position values('F001', '0004', 'Yes');
+insert into Position values('M001', '0005', 'Yes');
+insert into Position values('P001', '0006', 'Yes');
+insert into Position values('I001', '0007', 'Yes');
+insert into Position values('F001', '0005', 'No');
+insert into Position values('P001', '0008', 'No');
+insert into Position values('M001', '0001', 'No');
+insert into Position values('I001', '0006', 'No');
+insert into Position values('S001', '0003', 'No');
+insert into Position values('E001', '0007', 'No');
